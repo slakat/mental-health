@@ -1,25 +1,29 @@
-(function() {
-
-  "use strict";
-
-  var App = angular.module("App", [
+angular.module("App", [
     "App.controllers",
     "App.services",
     "App.directives",
     "App.filters",
     "ngRoute",
-    "ngResource"
-  ]);
+    "ngResource",
+    "ui.router",
+    "ngAnimate"
+  ])
 
-  App.config(function ($routeProvider) {
-    $routeProvider
-      .when('/view1', {
-           templateUrl: 'view/view1.html'
-      })
-      .when('/view2', {
-           templateUrl: 'view/view2.html'
-      })
-      .otherwise({redirectTo : 'view1'});
-  });
+  .run(function($state, $rootScope) {
+        $state.go('view1');
+    })
 
-}());
+  .config(function($stateProvider) {
+    $stateProvider
+        .state('view1', {
+          url: '/view1',
+            controller: 'view1Controller',
+          templateUrl: '/view/view1.html'
+        })
+        .state('view2', {
+          url: '/view2',
+            controller: 'view1Controller',
+          templateUrl: '/view/view2.html'
+        });
+  })
+

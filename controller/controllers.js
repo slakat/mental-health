@@ -1,16 +1,9 @@
-(function() {
+angular.module("App.controllers", [])
 
-  "use strict";
+.controller('view1Controller', function($scope) {
+  $scope.cssClass = 'view1';
+})
 
-  var App = angular.module("App.controllers", []);
-
-  App.controller("MyCtrl1", ["$scope", function ($scope, UtilSrvc){
-    $scope.aVariable = 'anExampleValueWithinScope';
-    $scope.valueFromService = UtilSrvc.helloWorld("User");
-  }]);
-
-  App.controller("MyCtrl2", ["$scope", function($scope){
-      // if you have many controllers, it's better to separate them into files
-  }]);
-
-}());
+.controller('view2Controller', function($scope) {
+  $scope.cssClass = 'view2';
+});

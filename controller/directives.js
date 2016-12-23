@@ -24,5 +24,11 @@
     };
   });
 
+  App.directive('testing', function() {
+    return  {
+      template:'<h1>HOLASDASDASDASDAS</h1>',
+    };
+  });
+
 // you may add as much directives as you want below
 }());
