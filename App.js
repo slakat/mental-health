@@ -29,7 +29,7 @@
                 controller: 'view2Controller'
             }).
             otherwise({
-                redirectTo: 'view/view1'
+                redirectTo: '/view1'
             });
         }]);
 
