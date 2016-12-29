@@ -1,10 +1,10 @@
 .view        {
     bottom:0;
     padding-top:200px;
-    position:absolute;
     text-align:center;
     top:0;
     width:100%;
+    min-height: 100vh;
 }
 
 .view a     { margin-top:50px; }
@@ -13,8 +13,8 @@
 
 /* Background and text colors for partial view pages (view1, view2, view3)
 ------------------------------------------------------------- */
-.view1  { background:#bef2de; color:#00907c; }
-.view2 	{ background:#D4D0EA; color:#55316f; }
+.view1  { background: #000; color:#00907c; }
+.view2 	{  color:#55316f; }
 .view3 	{ background:#FFCBA4; color:rgba(149, 95, 40, 0.91); }
 
 .view.ng-leave 	{ z-index:9999; }
@@ -120,4 +120,15 @@
     -webkit-animation:slideInRight 0.5s both ease-in;
     -moz-animation:slideInRight 0.5s both ease-in;
     animation:slideInRight 0.5s both ease-in;
+}
+
+/* instructions */
+.instructions-inner img{
+    width: 200px;
+}
+
+.instructions-inner a.button{
+    padding: 10px;
+    background: #fff;
+    color: #000;
 }
